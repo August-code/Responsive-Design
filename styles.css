@@ -5,10 +5,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
 }
 
 div.nav-bar {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem 6rem;
     width: 100vw;
@@ -18,6 +20,19 @@ div.nav-bar {
 div.logo {
     font-size: 1.5rem;
     color: #bcc3c7;
+}
+
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+    color: #bcc3c7;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:focus {
+    outline: none;
 }
 
 ul.nav-links {
@@ -35,6 +50,7 @@ ul li {
 ul li a {
     text-decoration: none;
     color: #88949B;
+    font-weight: bold;
     padding: 0.5vw;
 }
 
@@ -344,4 +360,111 @@ div.footer h6 {
     color: #88949B;
     font-size: 1rem;
     padding-top: 6rem;
+}
+
+@media only screen and (max-width: 650px) {
+    div.logo {
+        font-size: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    div.nav-bar {
+        display: flex;
+        padding: 2rem 2rem;
+        width: 100vw;
+        background-color: #304353;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    ul.nav-links {
+        display: none;
+    }
+
+    ul.nav-links.show {
+        display:flex;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+
+@media only screen and (max-width: 650px) {
+    div.hero-section {
+        padding: 3rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.hero-background {
+        padding: 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.hero-background-pos {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.background {
+        padding: 10px 10px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.background h4 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.background p {
+        padding-left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    div.snapshot-box-content {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    div.snapshot-box {
+        padding: 1rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    div.box1, div.box3 {
+        padding: 25px 10px;
+        width: 350px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    div.footer-input {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    input[type="text"], input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    textarea {
+        width: 100%;
+    }
 }
